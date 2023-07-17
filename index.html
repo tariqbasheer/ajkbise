@@ -10,6 +10,7 @@
     <label for="rollno">Enter Roll Number:</label>
     <input type="text" id="rollno" name="rollno">
     <button type="button" onclick="showResult()">Show Result</button>
+    <button type="button" onclick="showResult1()">login</button>
   </form>
   
   <hr>
@@ -35,6 +36,24 @@
       // Append the iframe to the result area
       document.getElementById('resultArea').appendChild(iframe);
     }
+
+function showResult1() {
+     
+      var resultUrl1 = "https://ssc.ajkbise.net/institution-panel/login.php";
+      
+      // Clear previous result (if any)
+      document.getElementById('resultArea').innerHTML = "";
+      
+      // Create an iframe and set its source to the result URL
+      var iframe = document.createElement('iframe');
+      iframe.src = resultUrl1;
+      iframe.style.width = "45%";
+      iframe.style.height = "400px";
+      
+      // Append the iframe to the result area
+      document.getElementById('resultArea').appendChild(iframe);
+    }
+    
   </script>
 </body>
 </html>
